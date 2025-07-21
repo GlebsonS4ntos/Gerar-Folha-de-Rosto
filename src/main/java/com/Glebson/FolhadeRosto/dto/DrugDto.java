@@ -1,17 +1,17 @@
 package com.Glebson.FolhadeRosto.dto;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 public class DrugDto {
     private String name;
     private String dosage;
-    private LocalDate starTreatment;
-    private LocalDate endTreatment;
+    private Date starTreatment;
+    private Date endTreatment;
 
     public DrugDto() {
     }
 
-    public DrugDto(String name, String dosage, LocalDate starTreatment, LocalDate endTreatment) {
+    public DrugDto(String name, String dosage, Date starTreatment, Date endTreatment) {
         this.name = name;
         this.dosage = dosage;
         this.starTreatment = starTreatment;
@@ -34,19 +34,19 @@ public class DrugDto {
         this.dosage = dosage;
     }
 
-    public LocalDate getStarTreatment() {
+    public Date getStarTreatment() {
         return starTreatment;
     }
 
-    public void setStarTreatment(LocalDate starTreatment) {
+    public void setStarTreatment(Date starTreatment) {
         this.starTreatment = starTreatment;
     }
 
-    public LocalDate getEndTreatment() {
+    public Date getEndTreatment() {
         return endTreatment;
     }
 
-    public void setEndTreatment(LocalDate endTreatment) {
+    public void setEndTreatment(Date endTreatment) {
         this.endTreatment = endTreatment;
     }
 }

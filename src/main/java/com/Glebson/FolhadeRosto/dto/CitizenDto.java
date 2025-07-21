@@ -1,13 +1,13 @@
 package com.Glebson.FolhadeRosto.dto;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 public class CitizenDto {
     private String name;
     private String socialName;
     private String cpf;
     private String cns;
-    private LocalDate birthDate;
+    private Date birthDate;
     private String gender;
     private String motherName;
     private String fatherName;
@@ -15,7 +15,7 @@ public class CitizenDto {
     public CitizenDto() {
     }
 
-    public CitizenDto(String name, String socialName, String cpf, String cns, LocalDate birthDate, String gender,
+    public CitizenDto(String name, String socialName, String cpf, String cns, Date birthDate, String gender,
             String motherName, String fatherName) {
         this.name = name;
         this.socialName = socialName;
@@ -83,12 +83,11 @@ public class CitizenDto {
         this.fatherName = fatherName;
     }
 
-    public LocalDate getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
+    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
-
 }

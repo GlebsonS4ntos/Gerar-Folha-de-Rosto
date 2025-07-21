@@ -41,7 +41,7 @@ public class CitizenService {
             rs.getString("no_social"),
             rs.getString("nu_cpf"),
             rs.getString("nu_cns"),
-            rs.getDate("dt_nascimento").toLocalDate(),
+            rs.getDate("dt_nascimento"),
             rs.getString("no_sexo"),
             rs.getString("no_mae"),
             rs.getString("no_pai")
@@ -95,8 +95,8 @@ public class CitizenService {
         return CompletableFuture.completedFuture(jdbcTemplate.query(sql, (rs, rowNum) -> new DrugDto(
             rs.getString("no_principio_ativo"),
             rs.getString("no_posologia"),
-            rs.getDate("dt_inicio_tratamento").toLocalDate(),
-            rs.getDate("dt_fim_tratamento").toLocalDate()
+            rs.getDate("dt_inicio_tratamento"),
+            rs.getDate("dt_fim_tratamento")
         ), citizenCode));
     }
 

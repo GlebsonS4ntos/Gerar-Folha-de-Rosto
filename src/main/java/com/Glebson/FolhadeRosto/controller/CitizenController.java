@@ -5,6 +5,7 @@ import java.util.concurrent.CompletableFuture;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,12 +18,12 @@ import com.Glebson.FolhadeRosto.dto.DrugDto;
 import com.Glebson.FolhadeRosto.service.CitizenService;
 import com.Glebson.FolhadeRosto.service.PdfService;
 
-
-@RestController
-@RequestMapping("/citizen")
-public class CitizenController {
-    private final CitizenService relatorioService;
-    private final PdfService pdfService;
+    @CrossOrigin(origins = "*")
+    @RestController
+    @RequestMapping("/citizen")
+    public class CitizenController {
+        private final CitizenService relatorioService;
+        private final PdfService pdfService;
 
     public CitizenController(CitizenService relatorioService, PdfService pdfService) {
         this.relatorioService = relatorioService;
@@ -30,11 +31,12 @@ public class CitizenController {
     }
 
     @GetMapping()
-    public ResponseEntity getCitizenInfo(@RequestHeader(required = false) Long medicalRecordId, @RequestHeader(required = false) Long citizenCode) {
+    public ResponseEntity getCitizenInfo(@RequestHeader(required = false) String medicalRecordId, @RequestHeader(required = false) String citizenCode) {
         if((medicalRecordId == null && citizenCode == null) || (medicalRecordId != null && citizenCode != null)) return ResponseEntity.badRequest().build();
+        
         try {
             if (medicalRecordId != null) {
-                Long ctCode = this.relatorioService.getCitizenCodeByMedicalRecordAsync(medicalRecordId).get();
+                Long ctCode = this.relatorioService.getCitizenCodeByMedicalRecordAsync(Long.parseLong(medicalRecordId.replace("\"", ""))).get();
 
                 CompletableFuture<CitizenDto> citizenInfo = this.relatorioService.getCitizenInfoAsync(ctCode);
                 CompletableFuture<List<ConditionDto>> conditions = this.relatorioService.getConditionsAsync(ctCode);
@@ -53,10 +55,10 @@ public class CitizenController {
                         allergies.get()));
             }
 
-            CompletableFuture<CitizenDto> citizenInfo = this.relatorioService.getCitizenInfoAsync(citizenCode);
-            CompletableFuture<List<ConditionDto>> conditions = this.relatorioService.getConditionsAsync(citizenCode);
-            CompletableFuture<List<DrugDto>> drugs = this.relatorioService.getActiveDrugsAsync(citizenCode);
-            CompletableFuture<List<AllergyDto>> allergies = this.relatorioService.getAllergiesAsync(citizenCode);
+            CompletableFuture<CitizenDto> citizenInfo = this.relatorioService.getCitizenInfoAsync(Long.parseLong(citizenCode.replace("\"", "")));
+            CompletableFuture<List<ConditionDto>> conditions = this.relatorioService.getConditionsAsync(Long.parseLong(citizenCode.replace("\"", "")));
+            CompletableFuture<List<DrugDto>> drugs = this.relatorioService.getActiveDrugsAsync(Long.parseLong(citizenCode.replace("\"", "")));
+            CompletableFuture<List<AllergyDto>> allergies = this.relatorioService.getAllergiesAsync(Long.parseLong(citizenCode.replace("\"", "")));
 
             CompletableFuture.allOf(citizenInfo, conditions, drugs,allergies).join();
 

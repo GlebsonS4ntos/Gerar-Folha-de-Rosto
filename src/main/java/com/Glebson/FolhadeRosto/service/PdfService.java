@@ -25,8 +25,17 @@ public class PdfService {
     public byte[] generateFolhaDeRostoPdf(CitizenDto citizenDto, List<ConditionDto> conditions, List<DrugDto> drugs, List<AllergyDto> allergies) throws JRException {                 
         InputStream stream = getClass().getResourceAsStream("/jasperReports/folhaDeRosto.jrxml");         
         JasperReport report = JasperCompileManager.compileReport(stream);
+        
         JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(List.of(citizenDto));
+        JRBeanCollectionDataSource alergyDataSource = new JRBeanCollectionDataSource(allergies);
+        JRBeanCollectionDataSource conditionDataSource = new JRBeanCollectionDataSource(conditions);
+        JRBeanCollectionDataSource drugsDataSource = new JRBeanCollectionDataSource(drugs);
+
         HashMap<String, Object> params = new HashMap<>();
+        params.put("ConditionsDataSource", conditionDataSource);
+        params.put("DrugsDataSource", drugsDataSource);
+        params.put("AllergyDataSource", alergyDataSource);
+
         JasperPrint print = JasperFillManager.fillReport(report, params, dataSource);
         return JasperExportManager.exportReportToPdf(print);
     }

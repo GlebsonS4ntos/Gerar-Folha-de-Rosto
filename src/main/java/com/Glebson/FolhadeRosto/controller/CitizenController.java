@@ -18,10 +18,10 @@ import com.Glebson.FolhadeRosto.dto.DrugDto;
 import com.Glebson.FolhadeRosto.service.CitizenService;
 import com.Glebson.FolhadeRosto.service.PdfService;
 
-    @CrossOrigin(origins = "*")
-    @RestController
-    @RequestMapping("/citizen")
-    public class CitizenController {
+@CrossOrigin(origins = "*")
+@RestController
+@RequestMapping("/citizen")
+public class CitizenController {
         private final CitizenService relatorioService;
         private final PdfService pdfService;
 

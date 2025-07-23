@@ -1,9 +1,112 @@
 <!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
-<jasperReport name="Blank_A4" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7778cf01-0e66-4fc9-a699-1c078886746a">
-	<dataset name="Dataset1" uuid="326e5511-97f3-4bd7-9401-792c1c2e9d30">
+<jasperReport name="tt" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="97c35e34-ed93-4435-89ab-bd68b5fa25b4">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<dataset name="Allergy" uuid="52866f65-08aa-44c9-a359-270dd3843bac">
+		<query language="sql"><![CDATA[]]></query>
+		<field name="name" class="java.lang.String"/>
+		<field name="category" class="java.lang.String"/>
+		<field name="criticality" class="java.lang.String"/>
+		<field name="reaction" class="java.lang.String"/>
+		<field name="certainty" class="java.lang.String"/>
+	</dataset>
+	<dataset name="Conditions" uuid="e2c42966-04bb-44d2-91d8-26416f5a8808">
 		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 		<query language="sql"><![CDATA[]]></query>
+		<field name="ciapCode" class="java.lang.String"/>
+		<field name="description" class="java.lang.String"/>
 	</dataset>
+	<dataset name="Drugs" uuid="d565cc98-2c64-4490-af5f-499cd74e43cc">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<query language="sql"><![CDATA[]]></query>
+		<field name="name" class="java.lang.String"/>
+		<field name="dosage" class="java.lang.String"/>
+		<field name="starTreatment" class="java.util.Date"/>
+		<field name="endTreatment" class="java.util.Date"/>
+	</dataset>
+	<parameter name="AllergyDataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="DrugsDataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ConditionsDataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
 	<query language="sql"><![CDATA[]]></query>
 	<field name="name" class="java.lang.String"/>
 	<field name="socialName" class="java.lang.String"/>
@@ -14,49 +117,282 @@
 	<field name="motherName" class="java.lang.String"/>
 	<field name="fatherName" class="java.lang.String"/>
 	<background splitType="Stretch"/>
-	<title height="90" splitType="Stretch">
-		<element kind="rectangle" uuid="a10f5ff5-891c-4a67-9a33-fc0a378e0817" x="0" y="0" width="550" height="81"/>
-		<element kind="staticText" uuid="06814642-f010-4d24-90f3-cbcabf897209" x="180" y="25" width="340" height="40" markup="none" fontName="SansSerif" fontSize="22.0" hTextAlign="Center">
+	<pageHeader height="81">
+		<element kind="rectangle" uuid="6bcea114-bb42-4a98-af06-2428ad699e51" x="0" y="0" width="550" height="81"/>
+		<element kind="staticText" uuid="1b920598-f91b-4403-86ee-391f9f7423e4" x="180" y="25" width="340" height="40" markup="none" fontName="SansSerif" fontSize="22.0" hTextAlign="Center">
 			<text><![CDATA[FOLHA DE ROSTO DO CIDADÃO]]></text>
 		</element>
-		<element kind="image" uuid="ae245aa3-cf9d-4f7f-8651-dfc8e636ec9f" x="20" y="20" width="130" height="50">
+		<element kind="image" uuid="168bd217-db9e-4a2d-b12b-1e56b328b692" x="20" y="20" width="130" height="50">
 			<expression><![CDATA["https://sisaps.saude.gov.br/sistemas/esusaps/img/bannerPage/logo-esusaps.svg"]]></expression>
 		</element>
-	</title>
-	<detail>
-		<band height="595" splitType="Stretch">
-			<element kind="rectangle" uuid="f0e05a64-f74c-4c9e-b978-ec9ec0f386bb" x="0" y="0" width="550" height="70"/>
-			<element kind="rectangle" uuid="689f2f00-ef57-48e4-aaac-7f4df1d340ae" x="0" y="80" width="550" height="515"/>
-			<element kind="textField" uuid="8852736d-4daf-4e88-8b37-a6dc3b20f5de" x="10" y="10" width="340" height="18" fontSize="8.0">
-				<expression><![CDATA["NOME: " + $F{name} + ($F{socialName} != null && !$F{socialName}.isEmpty() ? " (" + $F{socialName} + ")" : "")
+	</pageHeader>
+	<columnHeader height="94" splitType="Stretch">
+		<element kind="rectangle" uuid="4be14d83-d96c-4593-9162-859894596db2" x="0" y="9" width="550" height="70"/>
+		<element kind="textField" uuid="63a59083-863b-417b-88c1-2a626cda3fc4" x="10" y="17" width="340" height="18" fontSize="8.0">
+			<expression><![CDATA["NOME: " + $F{name} + ($F{socialName} != null && !$F{socialName}.isEmpty() ? " (" + $F{socialName} + ")" : "")
 ]]></expression>
+		</element>
+		<element kind="textField" uuid="54b45f82-c141-4a80-84db-f25086f5fa62" x="360" y="17" width="100" height="18" fontSize="8.0">
+			<expression><![CDATA["DATA NASC. :"+ new java.text.SimpleDateFormat("dd/MM/yyyy").format($F{birthDate})]]></expression>
+		</element>
+		<element kind="textField" uuid="2c1bffd2-207a-40e3-957e-266e3d378ae9" x="460" y="17" width="90" height="18" fontSize="8.0">
+			<expression><![CDATA["GÊNERO: "+$F{gender}]]></expression>
+		</element>
+		<element kind="textField" uuid="c915fcec-e533-4562-be68-dbe35e4d9d8b" x="10" y="35" width="100" height="18" fontSize="8.0">
+			<expression><![CDATA["CNS :"+($F{cns} == null || $F{cns}.isEmpty() ? "--" : $F{cns})]]></expression>
+		</element>
+		<element kind="textField" uuid="c31bf3d8-fe28-4fff-81be-926b17818945" x="140" y="35" width="100" height="18" fontSize="8.0">
+			<expression><![CDATA["CPF :"+($F{cpf} == null || $F{cpf}.isEmpty() ? "--" : $F{cpf})]]></expression>
+		</element>
+		<element kind="textField" uuid="76f09e2b-f366-46ad-9277-8175f17119a9" x="10" y="60" width="240" height="18" fontSize="8.0">
+			<expression><![CDATA["MÃE: " + (($F{motherName} == null || $F{motherName}.isEmpty()) ? "--" : $F{motherName}.toUpperCase())
+]]></expression>
+		</element>
+		<element kind="textField" uuid="6d40e24a-8735-4f59-9339-781c8e453923" x="250" y="60" width="300" height="18" fontSize="8.0">
+			<expression><![CDATA["PAI: " + (($F{fatherName} == null || $F{fatherName}.isEmpty()) ? "--" : $F{fatherName}.toUpperCase())
+]]></expression>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="370" splitType="Stretch">
+			<element kind="staticText" uuid="d123d949-06e3-4cc3-a729-c246e0fbd5e3" x="0" y="0" width="290" height="19" fontSize="15.0" bold="true">
+				<text><![CDATA[CONDIÇÕES]]></text>
 			</element>
-			<element kind="textField" uuid="1ac82396-8e36-4b94-bf51-e6f8a0e15e63" x="360" y="10" width="100" height="18" fontSize="8.0">
-				<expression><![CDATA["DATA NASC. :"+ new java.text.SimpleDateFormat("dd/MM/yyyy").format($F{birthDate})]]></expression>
+			<element kind="component" uuid="6aa86d4e-79b9-498e-83b9-6495a2e002b8" x="0" y="30" width="550" height="59">
+				<component kind="table" whenNoDataType="NoDataCell">
+					<datasetRun uuid="cf80f3a0-3c39-4c7f-8a87-8644ec3e0ed0" subDataset="Conditions">
+						<dataSourceExpression><![CDATA[$P{ConditionsDataSource}]]></dataSourceExpression>
+					</datasetRun>
+					<noData height="50">
+						<element kind="staticText" uuid="2a92cf3c-42fe-4ae9-a160-720265c8d3a8" x="0" y="0" width="550" height="50" hTextAlign="Center" vTextAlign="Middle">
+							<text><![CDATA[CIDADÃO NÃO POSSUI CONDIÇÕES]]></text>
+						</element>
+					</noData>
+					<column kind="single" uuid="0ba573bc-739f-4657-b951-ca0c59eab123" width="240">
+						<columnHeader height="30" style="Table 1_CH">
+							<element kind="staticText" uuid="9cdac72d-98f5-4ddd-b940-f28f6c8045be" x="0" y="0" width="240" height="30" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[CODIGO CIAP]]></text>
+							</element>
+						</columnHeader>
+						<detailCell height="30" style="Table 1_TD">
+							<element kind="textField" uuid="b29c9d68-c179-4801-a4f4-b58118cf6d8b" x="0" y="0" width="240" height="30" vTextAlign="Middle">
+								<expression><![CDATA[$F{ciapCode}]]></expression>
+								<box leftPadding="5"/>
+							</element>
+							<box leftPadding="0" style="Table 1_TD"/>
+						</detailCell>
+					</column>
+					<column kind="single" uuid="7ac03fc6-72f3-451c-9e06-02abb3492220" width="310">
+						<columnHeader height="30" style="Table 1_CH">
+							<element kind="staticText" uuid="91d600b7-f1b2-454d-a70e-5966ed6226e0" x="0" y="0" width="310" height="30" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[DESCRIÇÃO]]></text>
+							</element>
+						</columnHeader>
+						<detailCell height="30" style="Table 1_TD">
+							<element kind="textField" uuid="0c2631bd-9aa6-4311-8f80-3297b1e06c3d" x="0" y="0" width="310" height="30" vTextAlign="Middle">
+								<expression><![CDATA[$F{description}]]></expression>
+								<box leftPadding="5"/>
+							</element>
+							<box leftPadding="0" style="Table 1_TD"/>
+						</detailCell>
+					</column>
+				</component>
+				<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+				<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+				<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
 			</element>
-			<element kind="textField" uuid="c308624f-7fed-481e-810b-13418ddaa4c1" x="460" y="10" width="90" height="18" fontSize="8.0">
-				<expression><![CDATA["GÊNERO: "+$F{gender}]]></expression>
+			<element kind="frame" uuid="a35587bf-79f5-4044-a400-faf69bb9169e" positionType="Float" stretchType="NoStretch" x="1" y="270" width="558" height="100" backcolor="#FAF7F7">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<element kind="staticText" uuid="5e914364-f4d9-4e7f-b987-0abbc0065d33" stretchType="ElementGroupHeight" x="0" y="0" width="290" height="19" fontSize="15.0" bold="true">
+					<text><![CDATA[MEDICAMENTOS]]></text>
+				</element>
+				<element kind="component" uuid="66e6d9f3-08ce-456a-a0b9-5d909b337be8" stretchType="NoStretch" x="0" y="30" width="550" height="60">
+					<component kind="table" whenNoDataType="NoDataCell">
+						<datasetRun uuid="0bc721bd-2f43-43ca-a695-700ba4419ce4" subDataset="Drugs">
+							<dataSourceExpression><![CDATA[$P{DrugsDataSource}]]></dataSourceExpression>
+						</datasetRun>
+						<noData height="50">
+							<element kind="staticText" uuid="9ceae77a-c189-4922-9a35-4306d0608fe4" x="0" y="0" width="550" height="50" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[CIDADÃO NÃO POSSUI MEDICAÇÕES EM USO]]></text>
+							</element>
+						</noData>
+						<column kind="single" uuid="68b52fac-2af8-49d8-aa29-f9a0f469ef9d" width="190">
+							<columnHeader height="30" style="Table 2_CH">
+								<element kind="staticText" uuid="c5b10549-db2f-4b07-a5cc-b84ef68704bb" x="0" y="0" width="190" height="30" hTextAlign="Center" vTextAlign="Middle">
+									<text><![CDATA[NOME DO MEDICAMENTO]]></text>
+								</element>
+							</columnHeader>
+							<detailCell height="30" style="Table 2_TD">
+								<element kind="textField" uuid="e6156bc6-7c76-48f4-b6f5-115d2b00bed6" x="0" y="0" width="190" height="30" hTextAlign="Left" vTextAlign="Middle">
+									<expression><![CDATA[$F{name}]]></expression>
+									<box leftPadding="5"/>
+								</element>
+							</detailCell>
+						</column>
+						<column kind="single" uuid="b12cce8e-a4ad-448a-b7d6-a5a15ae7a93a" width="130">
+							<columnHeader height="30" style="Table 2_CH">
+								<element kind="staticText" uuid="182fefc4-71f0-4ef7-bb0a-cc701bfe7dcf" x="0" y="0" width="130" height="30" hTextAlign="Center" vTextAlign="Middle">
+									<text><![CDATA[USO]]></text>
+								</element>
+							</columnHeader>
+							<detailCell height="30" style="Table 2_TD">
+								<element kind="textField" uuid="1c3ee84f-a1ba-4725-a95a-a20fd56c1b49" x="0" y="0" width="130" height="30" vTextAlign="Middle">
+									<expression><![CDATA[$F{dosage}]]></expression>
+									<box leftPadding="5"/>
+								</element>
+							</detailCell>
+						</column>
+						<column kind="single" uuid="56d96e65-ce49-4653-a8c8-f78d0d331cc1" width="120">
+							<columnHeader height="30" style="Table 2_CH">
+								<element kind="staticText" uuid="046353c2-f4dd-43d0-ac10-3be00338d6fb" x="0" y="0" width="120" height="30" hTextAlign="Center" vTextAlign="Middle">
+									<text><![CDATA[DT INÍCIO]]></text>
+								</element>
+							</columnHeader>
+							<detailCell height="30" style="Table 2_TD">
+								<element kind="textField" uuid="f5fb5627-69e9-40c4-8b33-da8bcb518158" x="0" y="0" width="120" height="30" pattern="dd/MM/yyyy" vTextAlign="Middle">
+									<expression><![CDATA[$F{starTreatment}]]></expression>
+									<box leftPadding="5"/>
+								</element>
+							</detailCell>
+						</column>
+						<column kind="single" uuid="25b4a843-cb6f-4dc9-b7fe-c047f29a55fc" width="110">
+							<columnHeader height="30" style="Table 2_CH">
+								<element kind="staticText" uuid="a99c8dc9-f583-4f3a-8af0-f3c0bbcab323" x="0" y="0" width="110" height="30" hTextAlign="Center" vTextAlign="Middle">
+									<text><![CDATA[DT FIM]]></text>
+								</element>
+							</columnHeader>
+							<detailCell height="30" style="Table 2_TD">
+								<element kind="textField" uuid="d26f61f0-aa6f-4b7e-bde3-a69450c1d621" x="0" y="0" width="110" height="30" pattern="dd/MM/yyyy" blankWhenNull="true" vTextAlign="Middle">
+									<expression><![CDATA[$F{endTreatment}]]></expression>
+									<box leftPadding="5"/>
+								</element>
+							</detailCell>
+						</column>
+					</component>
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 2_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 2_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 2_TD"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</element>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
 			</element>
-			<element kind="textField" uuid="e2593cb5-9185-4cf6-8a76-c23cb3a8978f" x="10" y="30" width="100" height="18" fontSize="8.0">
-				<expression><![CDATA["CNS :"+($F{cns} == null || $F{cns}.isEmpty() ? "--" : $F{cns})]]></expression>
-			</element>
-			<element kind="textField" uuid="f4e87dca-f356-4332-ba86-b1e677026b5e" x="150" y="30" width="100" height="18" fontSize="8.0">
-				<expression><![CDATA["CPF :"+($F{cpf} == null || $F{cpf}.isEmpty() ? "--" : $F{cpf})]]></expression>
-			</element>
-			<element kind="textField" uuid="8d0f64eb-44e0-4f85-a0f6-483be1560d7c" x="10" y="48" width="240" height="18" fontSize="8.0">
-				<expression><![CDATA["MÃE: "+ ($F{motherName} == null || $F{motherName}.isEmpty() ? "--" : $F{motherName})]]></expression>
-			</element>
-			<element kind="textField" uuid="a4ce4e82-beee-49c1-b4a6-e70dac387e14" x="250" y="48" width="300" height="18" fontSize="8.0">
-				<expression><![CDATA["PAI: "+ ($F{fatherName} == null || $F{fatherName}.isEmpty() ? "--" : $F{fatherName})]]></expression>
+			<element kind="frame" uuid="27e49304-bdd5-4399-8c6b-3a8d4b54e1c8" positionType="Float" stretchType="NoStretch" x="0" y="130" width="559" height="100" backcolor="#E83F3C">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<element kind="staticText" uuid="52cfb93c-c942-4146-a0c4-794691b15cc6" positionType="Float" x="0" y="0" width="290" height="19" fontSize="15.0" bold="true">
+					<text><![CDATA[ALERGIAS]]></text>
+				</element>
+				<element kind="component" uuid="e607f71e-ac13-4b07-802b-b6e632349fee" positionType="Float" x="0" y="30" width="550" height="60">
+					<component kind="table" whenNoDataType="NoDataCell">
+						<datasetRun uuid="bec3ef46-b0f5-43ff-8dae-a9751664e8c1" subDataset="Allergy">
+							<dataSourceExpression><![CDATA[$P{AllergyDataSource}]]></dataSourceExpression>
+						</datasetRun>
+						<noData height="50">
+							<element kind="staticText" uuid="88625b3e-e7bb-4a8d-9bd7-482e3f4e3dde" x="0" y="0" width="549" height="50" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[CIDADÃO NÃO POSSUI ALERGIAS]]></text>
+							</element>
+						</noData>
+						<column kind="single" uuid="ed3df14e-d035-4a54-8c70-4893c02228b3" width="80">
+							<columnHeader height="30" style="Table_CH">
+								<element kind="staticText" uuid="8024ba63-9bcd-45c6-8371-b96fc65511be" x="0" y="0" width="80" height="30" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
+									<text><![CDATA[REAÇÃO]]></text>
+								</element>
+							</columnHeader>
+							<detailCell height="30" style="Table_TD">
+								<element kind="textField" uuid="6bc1aa75-5a39-47cf-8b96-05a6275c198c" x="0" y="0" width="80" height="30" blankWhenNull="true" vTextAlign="Middle">
+									<expression><![CDATA[$F{reaction}]]></expression>
+									<box leftPadding="5"/>
+								</element>
+								<box leftPadding="0" style="Table_TD"/>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						</column>
+						<column kind="single" uuid="01b47cef-6f51-4df0-833a-6266a64bebb1" width="170">
+							<columnHeader height="30" style="Table_CH">
+								<element kind="staticText" uuid="368c419b-86db-4bc7-96cd-5ba63b1b813b" x="0" y="0" width="170" height="30" hTextAlign="Center" vTextAlign="Middle">
+									<text><![CDATA[NOME DA ALERGIA]]></text>
+								</element>
+							</columnHeader>
+							<detailCell height="30" style="Table_TD">
+								<element kind="textField" uuid="21a2c729-f6aa-40d1-a7c9-248ba67ce21c" x="0" y="0" width="170" height="30" vTextAlign="Middle">
+									<expression><![CDATA[$F{name}]]></expression>
+									<box leftPadding="5"/>
+								</element>
+								<box leftPadding="0" style="Table_TD"/>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						</column>
+						<column kind="single" uuid="07ee590c-8507-4323-aee4-487d7b517efe" width="80">
+							<columnHeader height="30" style="Table_CH">
+								<element kind="staticText" uuid="36665b27-769d-46d9-bc1d-be5e2e5359dd" x="0" y="0" width="80" height="30" hTextAlign="Center" vTextAlign="Middle">
+									<text><![CDATA[CATEGORIA]]></text>
+								</element>
+							</columnHeader>
+							<detailCell height="30" style="Table_TD">
+								<element kind="textField" uuid="132b5727-dcfb-4cc2-8847-b91522bd71e6" x="0" y="0" width="80" height="30" blankWhenNull="true" vTextAlign="Middle">
+									<expression><![CDATA[$F{category}]]></expression>
+									<box leftPadding="5"/>
+								</element>
+								<box leftPadding="0" style="Table_TD"/>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						</column>
+						<column kind="single" uuid="5f294219-55d5-48fc-89c0-31fa7b296820" width="102">
+							<columnHeader height="30" style="Table_CH">
+								<element kind="staticText" uuid="d7414776-6e4f-4534-ae5a-6e57315d4679" x="0" y="0" width="102" height="30" hTextAlign="Center" vTextAlign="Middle">
+									<text><![CDATA[CRITICALIDADE]]></text>
+								</element>
+							</columnHeader>
+							<detailCell height="30" style="Table_TD">
+								<element kind="textField" uuid="92600026-658b-443e-b272-b10a79df803b" x="0" y="0" width="102" height="30" blankWhenNull="true" vTextAlign="Middle">
+									<expression><![CDATA[$F{criticality}]]></expression>
+									<box leftPadding="5"/>
+								</element>
+								<box leftPadding="0" style="Table_TD"/>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						</column>
+						<column kind="single" uuid="25391f60-cb8e-4648-acf5-226bd6625105" width="117">
+							<columnHeader height="30" style="Table_CH">
+								<element kind="staticText" uuid="15dfbddf-3e0b-4782-ab38-cf556a173181" x="0" y="0" width="117" height="30" hTextAlign="Center" vTextAlign="Middle">
+									<text><![CDATA[GRAU DE CERTEZA]]></text>
+								</element>
+							</columnHeader>
+							<detailCell height="30" style="Table_TD">
+								<element kind="textField" uuid="fc356d1b-130b-442a-a702-8dd911727a8f" x="0" y="0" width="117" height="30" blankWhenNull="true" vTextAlign="Middle">
+									<expression><![CDATA[$F{certainty}]]></expression>
+									<box leftPadding="5"/>
+								</element>
+								<box leftPadding="0" style="Table_TD"/>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						</column>
+					</component>
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</element>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
 			</element>
 		</band>
 	</detail>
-	<pageFooter height="54" splitType="Stretch">
-		<element kind="staticText" uuid="842bb375-163d-403c-9611-b90ec2a67bcb" x="2" y="15" width="88" height="14">
+	<pageFooter height="54">
+		<element kind="staticText" uuid="5ae6196c-e0c3-4cc2-bef1-a33f488d7ffc" x="0" y="40" width="88" height="14">
 			<text><![CDATA[Data de Impressão:]]></text>
 		</element>
-		<element kind="textField" uuid="e73ffbed-7bee-4136-aa3c-b9cd99d25fb0" x="90" y="15" width="92" height="14" pattern="dd/MM/yyYY HH:mm ">
+		<element kind="textField" uuid="2f337533-adc0-404e-9061-611051d24062" x="88" y="40" width="92" height="14" pattern="dd/MM/yyYY HH:mm ">
 			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+		<element kind="textField" uuid="29ef0213-ac7d-4912-8443-adbf44fe7af1" x="540" y="40" width="10" height="14">
+			<expression><![CDATA[$V{PAGE_NUMBER}]]></expression>
 		</element>
 	</pageFooter>
 </jasperReport>

@@ -388,7 +388,7 @@
 		<element kind="staticText" uuid="5ae6196c-e0c3-4cc2-bef1-a33f488d7ffc" x="0" y="40" width="88" height="14">
 			<text><![CDATA[Data de Impressão:]]></text>
 		</element>
-		<element kind="textField" uuid="2f337533-adc0-404e-9061-611051d24062" x="88" y="40" width="92" height="14" pattern="dd/MM/yyYY HH:mm ">
+		<element kind="textField" uuid="2f337533-adc0-404e-9061-611051d24062" x="88" y="40" width="92" height="14" pattern="dd/MM/yyyy HH:mm ">
 			<expression><![CDATA[new java.util.Date()]]></expression>
 		</element>
 		<element kind="textField" uuid="29ef0213-ac7d-4912-8443-adbf44fe7af1" x="540" y="40" width="10" height="14">
